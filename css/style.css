@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  /*Сглаживание шрифта*/
+  -moz-osx-font-smoothing: grayscale;
+  /*Сглаживание шрифта*/
+  line-height: 1.42;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/plant.jpg);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  margin-right: -20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  max-width: 400px;
+  max-height: 250px;
+  margin-right: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.list__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    background: none;
+    background-color: bisque;
+  }
+
+  .item {
+    width: 300px;
+  }
+}
+
+@media print {
+  .wrapper {
+    background-color: red;
+  }
+  .item {
+    width: 100%;
+  }
+}/*Между запросами на планшет и смартфон сделали медиа запрос на принтер*/
+
+@media (max-width: 480px) {
+  .wrapper {
+    background-color: aqua;
+  }
+}
+
+
+
